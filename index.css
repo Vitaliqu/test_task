@@ -1,0 +1,175 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Feature Card */
+.feature-card {
+    flex: 1 1 100%;
+}
+
+@media (min-width: 576px) {
+    .feature-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .feature-card {
+        flex: 1 1 calc(25% - 1rem);
+    }
+}
+
+/* Custom Width */
+.w-custom {
+    width: 90%;
+}
+
+@media (min-width: 992px) {
+    .w-custom {
+        width: 75%;
+    }
+}
+
+/* Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.carousel-indicators .active {
+    background-color: #0d6efd;
+}
+
+/* Text Styling */
+p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Blue Underlines */
+.blue-underline,
+.blue-underline-long {
+    background-color: #0d6efd;
+    height: 3px;
+}
+
+.blue-underline {
+    width: 25px;
+}
+
+.blue-underline-long {
+    width: 50px;
+}
+
+/* Checkmarks */
+.checkmark,
+.checkmark-negative {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-right: 0.5rem;
+}
+
+.checkmark {
+    background-color: #0d6efd;
+}
+
+.checkmark::before,
+.checkmark-negative::before {
+    content: "\2713";
+    color: white;
+}
+
+.checkmark-negative {
+    background-color: #ffffff;
+}
+
+.checkmark-negative::before {
+    color: #0d6efd;
+}
+
+/* Popular Tag */
+.most-popular {
+    margin-top: -20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-cards {
+        display: flex;
+        overflow-x: scroll;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .feature-card {
+        min-width: 300px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-cards {
+        display: block;
+    }
+}
+
+/* Card Styling */
+.card {
+    border: none;
+}
+
+/* FAQ Section */
+.faq-answer {
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+
+.faq-question:focus,
+.faq-question[aria-expanded="true"] {
+    color: #007bff;
+    background-color: #fff;
+    border: none;
+}
+
+.faq-block,
+.faq-question {
+    min-height: 4rem;
+}
+
+.dropdown-icon {
+    rotate: 270deg;
+}
+
+.faq-question .dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(90deg);
+    fill: #0d6efd;
+}
+
+/* Carousel Block on Small Screens */
+@media (max-width: 767px) {
+    .carousel-block {
+        width: 50% !important;
+        margin: 0 auto;
+    }
+}
